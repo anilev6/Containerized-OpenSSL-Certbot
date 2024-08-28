@@ -29,7 +29,9 @@ I made this as a fix to Telegram API failing to verify my self-signed SSL certif
 To make Telegram API accept the self-signed certificate, one has to set a webhook with a public key (`.pem` certificate).
 
 ```python
-cert_file_location="path/to/selfsigned.pem"
+cert_file_location = "path/to/selfsigned.pem"
 with open(cert_file_location, 'r') as cert_file:
-    await bot.setWebhook(url = url, certificate=cert_file)
+    await bot.setWebhook(url = url, certificate = cert_file)
 ```
+
+Go to https://api.telegram.org/bot**YOUR_BOT_TOKEN**/getWebhookInfo to check.
