@@ -15,6 +15,8 @@ This program spawns self-signed SSL certificates according to your `.env` file a
 
 You can use other docker commands, for example passing all the necessary `-e` on `docker run ...`.
 
+The image itself is also available: `docker pull anilev6/certificate_refresher`.
+
 ### No Docker, I'm on Linux/Mac
 
 1. Go to [main.py](/main.py) and comment the line below `# Docker container:`
