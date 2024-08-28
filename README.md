@@ -1,8 +1,12 @@
 # Containerized OpenSSL Certbot
 
-*SSL certificates refresher wrapped in Docker.*
+*SSL certificates refresher wrapped in Docker.* 
+
+Spawns 3 certificate files (.crt, .pem, .key) in a directory of your choice.
 
 This program spawns self-signed SSL certificates according to your `.env` file and refreshes them.
+
+See [docker-compose.yml](/docker-compose.yml) for more details.
 
 > Note: When using a proxy like Nginx, make sure that the certificates are mounted correctly and are generated before the proxy launches.
 > Pulling the image and launching it can take some time. If it doesn’t work the first time, try relaunching the containers with the pre-pulled images.
