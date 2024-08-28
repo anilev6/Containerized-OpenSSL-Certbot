@@ -5,6 +5,7 @@
 This program spawns self-signed SSL certificates according to your `.env` file and refreshes them.
 
 > Note: When using a proxy like Nginx, make sure that the certificates are mounted correctly and are generated before the proxy launches.
+> Pulling the image and launching it can take some time. If it doesn’t work the first time, try relaunching the containers with the pre-pulled images.
 
 ## Usage
 
