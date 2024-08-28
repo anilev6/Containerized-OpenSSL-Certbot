@@ -7,11 +7,11 @@ services:
     container_name: certificate_refresher
     volumes:
       # mount ssl folder where the certificates will be stored
-      - ${TARGET_FOLDER}:${CONTAINER_TARGET_FOLDER}
+      - ${TARGET_SSL_FOLDER}:/usr/src/app/ssl/
     environment:
+      # names without extention
       - CERT_NAME=${CERT_NAME}
       - KEY_NAME=${KEY_NAME}
-      - TARGET_FOLDER=${TARGET_FOLDER}
       - CERT_COMMON_NAME=${CERT_COMMON_NAME}
       - CERT_ORGANIZATION=${CERT_ORGANIZATION}
       - CERT_LOCALITY=${CERT_LOCALITY}
