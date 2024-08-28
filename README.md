@@ -4,6 +4,8 @@
 
 This program spawns self-signed SSL certificates according to your `.env` file and refreshes them.
 
+> Note: When using a proxy like Nginx, make sure that the certificates are mounted correctly and are generated before the proxy launches.
+
 ## Usage
 
 - Clone this repo
