@@ -34,4 +34,4 @@ with open(cert_file_location, 'r') as cert_file:
     await bot.setWebhook(url = url, certificate = cert_file)
 ```
 
-Go to https://api.telegram.org/bot**YOUR_BOT_TOKEN**/getWebhookInfo to check.
+Go to https://api.telegram.org/botYOUR_BOT_TOKEN/getWebhookInfo to check.
