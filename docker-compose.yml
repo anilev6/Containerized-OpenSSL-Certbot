@@ -1,0 +1,19 @@
+version: '3.12'
+
+name: certificate_refresher
+services:
+  certificate_refresher:
+    build: .
+    container_name: certificate_refresher
+    volumes:
+      # mount ssl folder where the certificates will be stored
+      - ${TARGET_FOLDER}:${CONTAINER_TARGET_FOLDER}
+    environment:
+      - CERT_NAME=${CERT_NAME}
+      - KEY_NAME=${KEY_NAME}
+      - TARGET_FOLDER=${TARGET_FOLDER}
+      - CERT_COMMON_NAME=${CERT_COMMON_NAME}
+      - CERT_ORGANIZATION=${CERT_ORGANIZATION}
+      - CERT_LOCALITY=${CERT_LOCALITY}
+      - CERT_STATE=${CERT_STATE}
+      - CERT_COUNTRY=${CERT_COUNTRY}
